@@ -20,3 +20,6 @@ Charts are saved in the `Project1/output/` folder.
 ## Preview
 ![Sample counts](Project1/output/01_sample_counts.png)
 ![Price](Project1/output/02_price_hist_box.png)
+
+
+[Full analysis](Project1/ANALYSIS.md)
