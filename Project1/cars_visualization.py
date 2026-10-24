@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 BASE = Path(__file__).parent          
-CSV = BASE / "cars_test.csv"          
+CSV = BASE / "data" / "cars_test.csv"          
 OUT = str(BASE / "output") + "/"      
 Path(OUT).mkdir(exist_ok=True)        
 
