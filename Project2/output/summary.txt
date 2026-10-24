@@ -1,0 +1,47 @@
+=== Sample counts ===
+total unique ads: 215
+  rent: 118
+  sale: 97
+price_agreed ads: 21
+land/garden ads: 3
+ads with implausible placeholder prices: 6 (deposit<1M: 3, rent<100k: 5, sale<500M: 0)
+usable residential sale ads (price>0, 15<=area<=2000): 72
+usable residential rent ads (rent or deposit>0, 15<=area<=2000): 104
+
+=== SALE ===
+sale price (billion toman): n=72 mean=11.96 median=6.60 std=15.20 min=2.00 max=110.00 skew=4.27 IQR-outliers=8
+area (sqm): n=72 mean=105.82 median=85.00 std=59.41 min=40.00 max=400.00 skew=2.21 IQR-outliers=6
+price per sqm (million toman): n=72 mean=105.87 median=78.61 std=94.37 min=12.08 max=611.11 skew=3.41 IQR-outliers=7
+correlation area_sqm vs price_bn: r = 0.45 (n=72)
+  mapping for 06_sale_ppsqm_by_city.png (low -> high median):
+    group 1: اندیشه  n=27  median=71.21
+    group 2: ساری  n=11  median=87.50
+    group 3: تهران  n=12  median=177.92
+  mapping for 07_sale_ppsqm_by_neighborhood.png (low -> high median):
+    group 1: اندیشه / فاز 3  n=4  median=56.44
+    group 2: اندیشه / فاز 1  n=13  median=69.79
+    group 3: آمل / خیابان هراز  n=3  median=70.97
+    group 4: اندیشه / شهرک مریم  n=3  median=74.40
+    group 5: اندیشه / فاز 2  n=4  median=76.91
+    group 6: فریدونکنار / مرکز شهر  n=3  median=93.46
+    group 7: ساری / سلمان فارسی  n=4  median=149.31
+  mapping for 08_sale_price_by_rooms.png (low -> high median):
+    group 1: 1  n=12  median=4.22
+    group 2: 2  n=47  median=6.10
+    group 3: 3  n=10  median=19.50
+anomalous sale ads (z-score or 3x-median rule within city, n>=8): 2 of 50 evaluated ads
+correlation area_sqm vs ppsqm_m: r = 0.14 (n=72)
+neighborhoods with n>=3: 7 (saved sale_neighborhood_table.csv)
+
+=== RENT ===
+deposit (million toman): n=104 mean=1304.84 median=650.00 std=1913.46 min=1.00 max=14000.00 skew=4.05 IQR-outliers=8
+monthly rent (million toman): n=55 mean=25.78 median=15.00 std=32.39 min=0.50 max=200.00 skew=3.62 IQR-outliers=4
+area (rent) (sqm): n=104 mean=121.24 median=105.00 std=73.22 min=45.00 max=450.00 skew=2.20 IQR-outliers=5
+rent types: deposit + monthly rent=55, full deposit (no rent)=49
+deposit [deposit + monthly rent] (million toman): n=55 mean=981.51 median=500.00 std=2003.56 min=1.00 max=14000.00 skew=5.44 IQR-outliers=5
+deposit [full deposit (no rent)] (million toman): n=49 mean=1667.76 median=850.00 std=1756.80 min=330.00 max=9000.00 skew=2.57 IQR-outliers=3
+deposit / monthly rent ratio (x): n=55 mean=79.96 median=23.33 std=141.03 min=0.33 max=740.00 skew=2.92 IQR-outliers=8
+correlation area_sqm vs rent_m: r = 0.43 (n=55)
+correlation deposit_m vs rent_m: r = 0.22 (n=55)
+[skip] 15_rent_by_city.png: fewer than 2 groups with n >= 5
+anomalous rent ads (z-score or 3x-median rule within city, n>=8): 0 of 8 evaluated ads
