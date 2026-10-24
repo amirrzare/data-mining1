@@ -22,9 +22,4 @@ python cars_visualization.py
 
 داده‌ی خام در `data/cars_test.csv` است و اسکریپت از همان‌جا می‌خواند. خروجی در پوشه‌ی `output/` ساخته می‌شود.
 
-## پیش‌نمایش
-
-![تعداد نمونه‌ها در برابر آگهی‌های با قیمت معتبر](output/01_sample_counts.png)
-![توزیع قیمت](output/02_price_hist_box.png)
-
 تحلیل کامل: [ANALYSIS.md](ANALYSIS.md)
