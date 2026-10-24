@@ -6,7 +6,6 @@
 
 | فایل | توضیح |
 |---|---|
-| `sheypoor_scraper.py` | اسکرپر کارت‌های عمومی آگهی (رعایت robots.txt، مکث بین درخواست‌ها) |
 | `realestate_visualization.py` | پاک‌سازی، نمودارها، آگهی‌های غیرعادی، `summary.txt` |
 | `data/sheypoor_all.csv` | داده‌ی استخراج‌شده |
 | `output/` | نمودارها و خروجی‌های جدولی |
